@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 # Данные для построения графика
 close = [10, 12, 11, 13, 12, 15, 13, 14, 12, 13, 11, 12, 10]
