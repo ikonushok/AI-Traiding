@@ -4,5 +4,5 @@ Open Lesson in AI-Trading
 
 ## Содержание:
 * Explanation.md - Методичка
-* trend_explanation.py - Код обьяснения разметки тренда для нейронки
 * HW.md - Домашнее задание
+* trend_explanation.py - Код обьяснения разметки тренда для нейронки
