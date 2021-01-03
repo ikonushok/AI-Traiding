@@ -20,6 +20,7 @@
 5.  [Лонг](https://help.tinkoff.ru/margin-trade/long/what-is/)
 6.  [Шорт](https://help.tinkoff.ru/margin-trade/short/what-is/)
 7.  [Журнал Торговли](https://github.com/ikonushok/AI-Traiding/blob/main/Open%20Lesson%20AI_Trading/data/Val_153547_t14_e30_SBER_Conv_1h_Up_v1.txt)
+    и [для чего он нужен](https://traderblog.net/torgovyj-zhurnal-trejdera/)
 8.  [Управление рисками](https://equity.today/risk-menedzhment-v-trejdinge.html)
 
 
