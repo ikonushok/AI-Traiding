@@ -13,14 +13,14 @@
 
 
 # Базовые понятия
-1.  Свеча
-2.  Паттерн
-3.  Технический индикатор
-4.  Стакан
-5.  Лонг
-6.  Шорт
+1.  [Свеча](https://ru.wikipedia.org/wiki/%D0%AF%D0%BF%D0%BE%D0%BD%D1%81%D0%BA%D0%B8%D0%B5_%D1%81%D0%B2%D0%B5%D1%87%D0%B8)
+2.  [Паттерн](https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D1%82%D1%82%D0%B5%D1%80%D0%BD_(%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7))
+3.  [Технический индикатор](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B8%D0%BD%D0%B4%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80)
+4.  [Стакан](https://trader-nt.ru/torgovlya-po-stakanu-zayavok-skalping-1-chast/)
+5.  [Лонг](https://help.tinkoff.ru/margin-trade/long/what-is/)
+6.  [Шорт](https://help.tinkoff.ru/margin-trade/short/what-is/)
 7.  [Журнал Торговли](https://github.com/ikonushok/AI-Traiding/blob/main/Open%20Lesson%20AI_Trading/data/Val_153547_t14_e30_SBER_Conv_1h_Up_v1.txt)
-8.  Управление рисками
+8.  [Управление рисками](https://equity.today/risk-menedzhment-v-trejdinge.html)
 
 
 ## Направления использования НС в трейдинге
@@ -35,7 +35,15 @@
     
 ## Торговля по тренду
 ### Что такое тренд и как обьяснить это компьютеру?
-**Определение:** 
+**[Определение](https://ru.fxssi.com/kak-opredelit-trend-na-rynke):** Тренд – это направленное движение цены.
+Умение правильно определять тренд может значительно повысить результативность сделок.
+
+Различают три вида трендов:
+* Восходящий (бычий) тренд.
+* Нисходящий (медвежий) тренд.
+* Горизонтальный тренд (флэт).
+
+**Восходящий тренд** – это последовательность растущих максимумов и минимумов, причем каждый последующий максимум и минимум выше предыдущего.
 
 ![img_1.png](data/img_1.png)
 
