@@ -3,10 +3,10 @@ Open Lesson in AI-Trading
 Стратегия: Торговля по тренду
 
 ## Содержание:
-* Explanation.md - Методичка
-* HW.md - Домашнее задание
-* trend_explanation.py - Код обьяснения разметки тренда для нейронки
+* [Explanation.md](Explanation.md) - Методичка
+* [HW.md](HW.md) - Домашнее задание
+* [trend_explanation.py](trend_explanation.py) - Код обьяснения разметки тренда для нейронки
 ---
-* data - датасет с ценами акции SBER (интервал 1h)
-* models - предобученные модели нейронок
-* notebooks - ноутбуки к уроку
+* [data](data) - датасет с ценами акции SBER (интервал 1h)
+* [models](models) - предобученные модели нейронок
+* [notebooks](notebooks) - ноутбуки к уроку
