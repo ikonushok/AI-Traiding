@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_style('darkgrid')
 
 # Данные для построения графика
 close = [10, 12, 11, 13, 12, 15, 13, 14, 12, 13, 11, 12, 10]
@@ -9,7 +11,6 @@ plt.scatter(10, close[9], label='trend= 4')
 plt.plot(x, close, label='Close')
 plt.title('Запаздывание сигналов от нейронки\nпри торговле по предсказанию тренда')
 plt.legend()
-plt.grid()
 plt.show()
 
 print('Рост = 1', '\nПлато = 0', '\nПадение = -1\n')
@@ -23,9 +24,9 @@ def signal(x):
 def trend(n, close = close):
     arr_trend = []
     for i in range(0, len(close)):
-        if i < n: arr_trend.append(0)
+        if i < n: arr_trend.append(0) # пишем 0, если i меньше тренда
         else:
-            x = close[i] - close[i - n]
+            x = close[i] - close[i - n] # находим разницу между close в начале и конце тренда
             arr_trend.append(signal(x))
     return arr_trend
 
