@@ -2,6 +2,8 @@ Open Lesson in AI-Trading
 
 Стратегия: Торговля по тренду
 
+Видео урока: [ссылка](https://drive.google.com/file/d/14m7OujvbBRyO1NjrTWke3CL8lwU544KG/view?usp=sharing)
+
 ## Содержание:
 * [Explanation.md](Explanation.md) - Методичка
 * [HW.md](HW.md) - Домашнее задание
