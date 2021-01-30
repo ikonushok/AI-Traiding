@@ -1,0 +1,1 @@
+Данный код взят из видео: https://m.youtube.com/watch?v=ZNTO5a-eg6E
