@@ -4,7 +4,7 @@
 
 *[trendln](https://github.com/GregoryMorse/trendln)*
 
-<img src="pictures/Pivot_points.png" width="600">
+<img src="pictures/Pivot_points.png" width="1000">
 
 *[Calculating Resistance and Pivot points with Python](https://medium.com/code-for-cause/calculating-resistance-and-pivot-points-with-python-caffbad46715)*
 
