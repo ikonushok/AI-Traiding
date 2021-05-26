@@ -1,6 +1,7 @@
  2 ноутбука с разметками уровней поддержки и сопротивления..
  
-[trendln.png](pictures/trendln.png)
+![trendln.png](pictures/trendln.png)
+
 *[trendln](https://github.com/GregoryMorse/trendln)*
 
 ## Задача:
