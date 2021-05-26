@@ -1,9 +1,11 @@
  2 ноутбука с разметками уровней поддержки и сопротивления..
  
 <img src="pictures/trendln.png" width="600">
+
 *[trendln](https://github.com/GregoryMorse/trendln)*
 
 <img src="pictures/Pivot_points.png" width="600">
+
 *[Calculating Resistance and Pivot points with Python](https://medium.com/code-for-cause/calculating-resistance-and-pivot-points-with-python-caffbad46715)*
 
 ## Задача:
