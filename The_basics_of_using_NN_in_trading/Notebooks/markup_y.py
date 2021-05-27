@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 #=======================SELL==============================
 
-def SELL(data, counter_lvl):
+def SELL(data, counter_lvl, plotting = True):
     
     plt.figure(figsize=(22, 8))
     
@@ -53,21 +53,22 @@ def SELL(data, counter_lvl):
             dates.append(lastDate)
     print()
     timeD = dt.timedelta(days=500)
-    
-        
-    for index in range(1, len(pivots)):
-        #print(str(pivots[index]) + " :" + str(dates[index]))
-        line = pd.DataFrame({'Date':[dates[index]], 'price':[pivots[index]], 'Signal':[-1]})
-        signals = signals.append(line, ignore_index=True)
-        
-        #plt.plot_date([dates[index], dates[index] + timeD],
-        #    [pivots[index], pivots[index]] , linestyle='solid' , linewidth=1, marker=',', color='red')
-            
-        plt.plot_date([dates[index], dates[index]],
-            [pivots[index], pivots[index]], marker='v', color='red')
-    
-    plt.grid()
-    plt.show()
+
+        for index in range(1, len(pivots)):
+            #print(str(pivots[index]) + " :" + str(dates[index]))
+            line = pd.DataFrame({'Date':[dates[index]], 'price':[pivots[index]], 'Signal':[-1]})
+            signals = signals.append(line, ignore_index=True)
+
+            #plt.plot_date([dates[index], dates[index] + timeD],
+            #    [pivots[index], pivots[index]] , linestyle='solid' , linewidth=1, marker=',', color='red')
+
+            if plotting = True:
+                plt.plot_date([dates[index], dates[index]],
+                [pivots[index], pivots[index]], marker='v', color='red')
+
+        if plotting = True:
+            plt.grid()
+            plt.show()
 
     return signals
 
@@ -76,7 +77,7 @@ def SELL(data, counter_lvl):
 
 #=======================BUY==============================
 
-def BUY(data, counter_lvl):
+def BUY(data, counter_lvl, plt = True):
     
     plt.figure(figsize=(22, 8))
     
@@ -115,8 +116,7 @@ def BUY(data, counter_lvl):
             dates.append(lastDate)
     print()
     timeD = dt.timedelta(days=500)
-        
-        
+
     for index in range(1, len(pivots)):
         #print(str(pivots[index]) + " :" + str(dates[index]))
         line = pd.DataFrame({'Date':[dates[index]], 'price':[pivots[index]], 'Signal':[1]})
@@ -124,11 +124,13 @@ def BUY(data, counter_lvl):
             
         #plt.plot_date([dates[index], dates[index] + timeD],
         #    [pivots[index], pivots[index]] , linestyle='solid' , linewidth=1, marker=',', color='red')
-            
-        plt.plot_date([dates[index], dates[index]],
+
+        if plotting = True:
+            plt.plot_date([dates[index], dates[index]],
             [pivots[index], pivots[index]], marker='^', color='green')
-    
-    plt.grid()
-    plt.show()
+    if plotting = True:
+        plt.grid()
+        plt.show()
+
     return signals
 
