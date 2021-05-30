@@ -9,20 +9,24 @@ Original file is located at
 
 import datetime as dt
 import pandas as pd
-from pandas_datareader import data as pdr 
+#from pandas_datareader import data as pdr
 import matplotlib.pyplot as plt
 
 
-#=======================SELL==============================
+## Размечаем Y
 
-def SELL(data, counter_lvl, plotting = True):
-    
-    plt.figure(figsize=(22, 8))
+#from pandas_datareader import data as pdr 
+#import datetime as dt
+
+
+def SELL(data, counter_lvl, plotting):
     
     signals = pd.DataFrame() # dataframe для записи сигналов
 
     #df['High'].plot(label='high')
-    data['Close'].plot(label='close')
+    if plotting == True:
+        plt.figure(figsize=(22, 8))
+        data['Close'].plot(label='close')
         
     pivots =[]
     dates = []
@@ -34,7 +38,7 @@ def SELL(data, counter_lvl, plotting = True):
     for i in data.index:
         currentMax = max(Range , default=0)
         #value=round(df["High"][i],2)
-        value=round(data['Close'][i], 2)
+        value=data['Close'][i]
             
         Range=Range[1:19]
         Range.append(value)
@@ -52,39 +56,36 @@ def SELL(data, counter_lvl, plotting = True):
             pivots.append(lastPivot)
             dates.append(lastDate)
     print()
-    timeD = dt.timedelta(days=500)
+    #timeD = dt.timedelta(days=500)
 
-        for index in range(1, len(pivots)):
-            #print(str(pivots[index]) + " :" + str(dates[index]))
-            line = pd.DataFrame({'Date':[dates[index]], 'price':[pivots[index]], 'Signal':[-1]})
-            signals = signals.append(line, ignore_index=True)
+    for index in range(1, len(pivots)):
+        #print(str(pivots[index]) + " :" + str(dates[index]))
+        line = pd.DataFrame({'Date':[dates[index]], 'price':[pivots[index]], 'Signal':[-1]})
+        signals = signals.append(line, ignore_index=True)
 
-            #plt.plot_date([dates[index], dates[index] + timeD],
-            #    [pivots[index], pivots[index]] , linestyle='solid' , linewidth=1, marker=',', color='red')
+        #plt.plot_date([dates[index], dates[index] + timeD],
+        #    [pivots[index], pivots[index]] , linestyle='solid' , linewidth=1, marker=',', color='red')
 
-            if plotting = True:
-                plt.plot_date([dates[index], dates[index]],
-                [pivots[index], pivots[index]], marker='v', color='red')
+        if plotting == True:
+            plt.plot_date([dates[index], dates[index]],
+            [pivots[index], pivots[index]], marker='v', color='red')
 
-        if plotting = True:
-            plt.grid()
-            plt.show()
+    if plotting == True:
+        plt.grid()
+        plt.show()
 
     return signals
-
-
-
-
-#=======================BUY==============================
-
-def BUY(data, counter_lvl, plt = True):
     
-    plt.figure(figsize=(22, 8))
+
+
+def BUY(data, counter_lvl, plotting):
     
     signals = pd.DataFrame() # dataframe для записи сигналов
 
     #df['Low'].plot(label='low')
-    data['Close'].plot(label='close')
+    if plotting == True:
+        plt.figure(figsize=(22, 8))
+        data['Close'].plot(label='close')
         
     pivots =[]
     dates = []
@@ -96,12 +97,12 @@ def BUY(data, counter_lvl, plt = True):
     for i in data.index:
         currentMax = min(Range , default=0)
         #value=round(df["Low"][i], 2)
-        value=round(data['Close'][i], 2)
+        value=data['Close'][i]
         
             
-        Range=Range[1:19]
+        Range=Range[1:20]
         Range.append(value)
-        daterange=daterange[1:19]
+        daterange=daterange[1:20]
         daterange.append(i)
             
         if currentMax == min(Range , default=0):
@@ -115,7 +116,7 @@ def BUY(data, counter_lvl, plt = True):
             pivots.append(lastPivot)
             dates.append(lastDate)
     print()
-    timeD = dt.timedelta(days=500)
+    #timeD = dt.timedelta(days=500)
 
     for index in range(1, len(pivots)):
         #print(str(pivots[index]) + " :" + str(dates[index]))
@@ -125,12 +126,12 @@ def BUY(data, counter_lvl, plt = True):
         #plt.plot_date([dates[index], dates[index] + timeD],
         #    [pivots[index], pivots[index]] , linestyle='solid' , linewidth=1, marker=',', color='red')
 
-        if plotting = True:
+        if plotting == True:
             plt.plot_date([dates[index], dates[index]],
             [pivots[index], pivots[index]], marker='^', color='green')
-    if plotting = True:
+
+    if plotting == True:
         plt.grid()
         plt.show()
 
     return signals
-
