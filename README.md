@@ -1,2 +1,2 @@
 # AI-Traiding
-Neural Nets in Algotraiding
+Neural Networks in Algotraiding
